@@ -4,19 +4,26 @@
 Pulsar.registerFunction(
   "readableVariableName",
   function (token, tokenGroup, prefix) {
-    // Create array with all path segments and token name at the end
-    const segments = [...tokenGroup.path];
-    if (!tokenGroup.isRoot) {
-      segments.push(tokenGroup.name);
-    }
-    segments.push(token.name);
+    // Create a set to store the unique token groups
+    const tokenGroups = new Set();
 
-    if (prefix && prefix.length > 0) {
-      segments.unshift(prefix);
+    // Add the current token group to the set
+    tokenGroups.add(tokenGroup);
+
+    // Iterate over the parent token groups and add them to the set
+    for (
+      let parentTokenGroup = tokenGroup.parent;
+      parentTokenGroup !== null;
+      parentTokenGroup = parentTokenGroup.parent
+    ) {
+      tokenGroups.add(parentTokenGroup);
     }
 
-    // Create "sentence" separated by spaces so we can camelcase it all
-    let sentence = segments.join(" ");
+    // Create an array of the unique token group names
+    const tokenGroupNames = [...tokenGroups.values()].map((tokenGroup) => tokenGroup.name);
+
+    // Create a sentence separated by spaces so we can camelcase it all
+    let sentence = tokenGroupNames.join(" ");
 
     // khebab case string from all segments
     sentence = sentence
