@@ -1,7 +1,7 @@
 {
   "id": "io.supernova.scss",
-  "name": "Token exporter for VIU",
-  "description": "SCSS tokens and SCSS style exporter",
+  "name": "Scss token exporter for VIU",
+  "description": "SCSS tokens exporter",
   "author": "Mo",
   "organization": "N/A",
   "source_dir": "src",
