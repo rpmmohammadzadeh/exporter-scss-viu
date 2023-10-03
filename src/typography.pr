@@ -8,8 +8,5 @@ and their value rendered using `rendered-color` blueprint
 {[ const allTokens = ds.tokensByType("Typography", brand.id) /]}
 {[ for token in allTokens ]}
 {[ if !token.referencedToken ]}
-    {[ inject "rendered-token-custom-prop" context token /]}
-
-
-{[/]}
-{[/]}
+{[ inject "rendered-token-var" context token /]}
+{[/]}{[/]}
