@@ -1,11 +1,11 @@
 {
   "id": "io.supernova.scss",
-  "name": "Token exporter for Monologue",
+  "name": "Token exporter for VIU",
   "description": "SCSS tokens and SCSS style exporter",
-  "author": "Benoit Rajalu",
+  "author": "Mo",
   "organization": "N/A",
   "source_dir": "src",
-  "homepage": "https://benrajalu.net",
+  "homepage": "",
   "version": "1.2",
   "usesBrands": true,
   "config": {
