@@ -18,16 +18,13 @@ Pulsar.registerFunction(
       segments.unshift(prefix);
     }
     
-    // Remove all spaces from the token group names
-    segments = segments.map((segment) => segment.replace(/\s+/g, ""));
-
     // Remove the second token group name from the segments array
     if (prefix && prefix.length > 0 && prefix === "measure") {
-      // Remove the second token group name from the segments array
       segments.splice(1, 1);
     }
 
-    
+    // Remove all spaces from the token group names
+    segments = segments.map((segment) => segment.replace(/\s+/g, ""));    
     
     // Create "sentence" separated by spaces so we can camelcase it all
     let sentence = segments.join(" ");
