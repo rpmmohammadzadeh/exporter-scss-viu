@@ -31,7 +31,7 @@ Pulsar.registerFunction(
 
     // Prepend an underscore if the sentence starts with a digit
     if (/^\d/.test(sentence)) {
-      sentence = "_" + sentence;
+      sentence = "-" + sentence;
     }
 
     return sentence;
