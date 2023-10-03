@@ -1,4 +1,4 @@
-{
+eva{
     "blueprints": [
         {
             "invoke": "colors.pr",
@@ -17,7 +17,7 @@
             "write_to": "measures.scss"
         },
         {
-            "invoke": "shadows.pr",
+            "invoke": "elevation.pr",
             "write_to": "shadows.scss"
         },
         {
