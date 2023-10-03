@@ -1,4 +1,4 @@
-# Custom Deisgn Tokens Exporter for Monologue
+# Custom Deisgn Tokens Exporter for VIU
 
 The SCSS Exporter exports a theme into SCSS variables aliases for CSS custom properties. It runs for:
 
