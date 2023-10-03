@@ -24,7 +24,7 @@ Pulsar.registerFunction(
     }
     if (segments.length > 1) {
     segments[1] = segments[1].replace(/\s+/g, "");
-    segments[2] = segments[2].replace(/\s+/g, "");
+    //segments[2] = segments[2].replace(/\s+/g, "");
     }
 
     
