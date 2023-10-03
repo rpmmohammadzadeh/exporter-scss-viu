@@ -20,7 +20,6 @@ Note: Token is passed as `context` property because it is injected
 Rendered as:
 
   --[name]: [value];
-  --{[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]};
 *}
 {[ let token = context /]}
 --{[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]};
