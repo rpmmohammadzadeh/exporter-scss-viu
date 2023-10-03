@@ -16,7 +16,7 @@ and their value rendered using `rendered-color` blueprint
 {[ inject "rendered-token-var" context token /]}{[/]}
 
 {[ for token in ds.tokensByType("Measure", brand.id) ]}
-{[ inject token context "rendered-token-var" /]}{[/]}
+{[ inject "rendered-token-var" context token /]}{[/]}
 
 {[ for token in ds.tokensByType("Shadow", brand.id) ]}
 {[ inject "rendered-token-var" context token /]}{[/]}
