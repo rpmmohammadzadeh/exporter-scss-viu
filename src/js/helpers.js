@@ -20,11 +20,11 @@ Pulsar.registerFunction(
     // Create "sentence" separated by spaces so we can camelcase it all
     let sentence = segments.join(" ");
 
-    // Remove repetitive strings from the sentence
-    sentence = sentence.split(" ").filter((word, index, arr) => arr.indexOf(word) === index).join(" ");
-
     // Convert all words to lowercase
     sentence = sentence.toLowerCase();
+
+    // Remove repetitive strings from the sentence
+    sentence = sentence.split(" ").filter((word, index, arr) => arr.indexOf(word) === index).join(" ");
 
     // Replace all non-alphanumeric characters with underscores
     sentence = sentence.replace(/[^a-zA-Z0-9_]/g, "-");
