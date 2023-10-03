@@ -69,7 +69,7 @@ Pulsar.registerPayload("behavior", {
   gradientTokenPrefix: "color",
   measureTokenPrefix: "",
   shadowTokenPrefix: "",
-  typographyTokenPrefix: "",
+  typographyTokenPrefix: "typography",
   radiusTokenPrefix: "",
   textTokenPrefix: "",
 });
