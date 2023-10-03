@@ -43,7 +43,7 @@ Pulsar.registerFunction(
       sentence = "_" + sentence;
     }
 
-    return "viu" + sentence;
+    return "viu-" + sentence;
   }
 );
 
