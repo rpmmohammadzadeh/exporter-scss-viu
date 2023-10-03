@@ -21,7 +21,10 @@ Pulsar.registerFunction(
     //segments.shift();
 
     // Remove the second token group name from the segments array
-    segments.splice(1, 1);
+    if (prefix && prefix.length > 0 && prefix === "measure") {
+      // Remove the second token group name from the segments array
+      segments.splice(1, 1);
+    }
     
     // Create "sentence" separated by spaces so we can camelcase it all
     let sentence = segments.join(" ");
