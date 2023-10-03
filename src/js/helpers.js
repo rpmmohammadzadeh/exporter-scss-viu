@@ -23,10 +23,8 @@ Pulsar.registerFunction(
       segments.splice(1, 1);
     }
 
-    // Remove the space from the third token group name
-    if (segments.length > 1) {
-      segments = segments.map((segment) => segment.replace(/\s+/g, ""));
-    }   
+    segments[1] = segments[1].replace(/\s+/g, "");
+    segments[2] = segments[2].replace(/\s+/g, "");
     
     // Create "sentence" separated by spaces so we can camelcase it all
     let sentence = segments.join(" ");
