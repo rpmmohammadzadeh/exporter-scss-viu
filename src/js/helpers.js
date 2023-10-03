@@ -27,11 +27,11 @@ Pulsar.registerFunction(
     sentence = sentence.toLowerCase();
 
     // Replace all non-alphanumeric characters with underscores
-    sentence = sentence.replace(/[^a-zA-Z0-9_]/g, "_");
+    sentence = sentence.replace(/[^a-zA-Z0-9_]/g, "-");
 
     // Prepend an underscore if the sentence starts with a digit
     if (/^\d/.test(sentence)) {
-      sentence = "-" + sentence;
+      sentence = "_" + sentence;
     }
 
     return sentence;
