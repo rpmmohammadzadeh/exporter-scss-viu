@@ -2,19 +2,11 @@
   "blueprints": [
     {
       "invoke": "tokens.pr",
-      "write_to": "_tokens.scss"
+      "write_to": "_global-tokens.scss"
     },
     {
       "invoke": "theme.pr",
-      "write_to": "_theme.scss"
-    },
-    {
-      "invoke": "tokens.pr",
-      "write_to": "_tokens.css"
-    },
-    {
-      "invoke": "theme.pr",
-      "write_to": "_theme.css"
-    }    
+      "write_to": "_viu-theme.scss"
+    }  
   ]
 }
