@@ -67,7 +67,7 @@ Pulsar.registerPayload("behavior", {
   colorTokenPrefix: "color",
   borderTokenPrefix: "border",
   gradientTokenPrefix: "color",
-  measureTokenPrefix: "",
+  measureTokenPrefix: "measure",
   shadowTokenPrefix: "",
   typographyTokenPrefix: "typography",
   radiusTokenPrefix: "",
