@@ -1,0 +1,2 @@
+{[ for token in ds.tokensByType("Radius", brand.id) ]}
+{[ inject "rendered-token-var" context token /]}{[/]}
