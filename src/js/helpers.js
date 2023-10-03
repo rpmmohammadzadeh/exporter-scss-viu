@@ -20,7 +20,7 @@ Pulsar.registerFunction(
     }
 
     // Create a sentence separated by spaces so we can camelcase it all
-    let sentence = [...tokenGroupNames].join("");
+    let sentence = [...tokenGroupNames].join(" ");
 
     // khebab case string from all segments
     sentence = sentence
