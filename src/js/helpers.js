@@ -1,41 +1,41 @@
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
+
+
 Pulsar.registerFunction(
- "readableVariableName",
- function (token, tokenGroup, prefix) {
-  // Create array with all path segments and token name at the end
-  const segments = [...tokenGroup.path];
-  if (!tokenGroup.isRoot) {
-   segments.push(tokenGroup.name);
+  "readableVariableName",
+  function (token, tokenGroup, prefix) {
+    // Create array with all path segments and token name at the end
+    const segments = [...tokenGroup.path];
+    if (!tokenGroup.isRoot) {
+      segments.push(tokenGroup.name);
+    }
+    segments.push(token.name);
+
+    if (prefix && prefix.length > 0) {
+      segments.unshift(prefix);
+    }
+
+    // Create "sentence" separated by spaces so we can camelcase it all
+    let sentence = segments.join(" ");
+
+    // Remove repetitive strings from the sentence
+    sentence = sentence.split(" ").filter((word, index, arr) => arr.indexOf(word) === index).join(" ");
+
+    // Convert all words to lowercase
+    sentence = sentence.toLowerCase();
+
+    // Replace all non-alphanumeric characters with underscores
+    sentence = sentence.replace(/[^a-zA-Z0-9_]/g, "_");
+
+    // Prepend an underscore if the sentence starts with a digit
+    if (/^\d/.test(sentence)) {
+      sentence = "_" + sentence;
+    }
+
+    return sentence;
   }
-  segments.push(token.name);
-
-  if (prefix && prefix.length > 0) {
-   segments.unshift(prefix);
-  }
-
-  // Create "sentence" separated by spaces so we can camelcase it all
-  let sentence = segments.join(" ");
-
-   // Remove repetitive strings from the sentence
-    sentence = sentence.split(" ").filter((word, index, arr) => arr.indexOf(word) === index).join(" "); 
-
-  // khebab case string from all segments
-  sentence = sentence
-   .toLowerCase()
-   .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => "-" + chr);
-
-  // only allow letters, digits, underscore and hyphen
-  sentence = sentence.replace(/[^a-zA-Z0-9_-]/g, "_");
-
-  // prepend underscore if it starts with digit
-  if (/^\d/.test(sentence)) {
-   sentence = "_" + sentence;
-  }
-
-  return sentence;
- }
 );
 
 function findAliases(token, allTokens) {
