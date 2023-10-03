@@ -9,29 +9,17 @@
             "write_to": "borders.scss"
         },
         {
-            "invoke": "gradients.pr",
-            "write_to": "gradients.scss"
-        },
-        {
             "invoke": "measures.pr",
             "write_to": "measures.scss"
         },
         {
             "invoke": "elevation.pr",
-            "write_to": "shadows.scss"
+            "write_to": "elevation.scss"
         },
         {
             "invoke": "typography.pr",
             "write_to": "typography.scss"
-        },
-        {
-            "invoke": "radius.pr",
-            "write_to": "radius.scss"
-        },
-        {
-            "invoke": "text.pr",
-            "write_to": "text.scss"
-        },       
+        },      
         {
             "invoke": "index-file.pr",
             "write_to": "index.scss"
