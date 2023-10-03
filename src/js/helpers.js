@@ -24,8 +24,8 @@ Pulsar.registerFunction(
     }
 
     // Remove the space from the third token group name
-    if (segments.length > 2) {
-      segments[2] = segments[2].replace(/\s+/g, "");
+    if (segments.length > 1) {
+      segments[1] = segments[1].replace(/\s+/g, "");
     }   
     
     // Create "sentence" separated by spaces so we can camelcase it all
