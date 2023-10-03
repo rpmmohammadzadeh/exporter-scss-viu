@@ -22,7 +22,7 @@ Pulsar.registerFunction(
     // Create an array of the unique token group names
     const tokenGroupNames = [...tokenGroups.values()].map((tokenGroup) => tokenGroup.name);
 
-    // Create a sentence separated by spaces so we can camelcase it all
+    // Create a sentence separated by spaces
     let sentence = tokenGroupNames.join(" ");
 
     // khebab case string from all segments
