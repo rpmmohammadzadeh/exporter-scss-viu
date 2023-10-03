@@ -79,10 +79,10 @@ Pulsar.registerPayload("behavior", {
   borderTokenPrefix: "border",
   gradientTokenPrefix: "color",
   measureTokenPrefix: "measure",
-  shadowTokenPrefix: "",
+  shadowTokenPrefix: "elevation",
   typographyTokenPrefix: "typography",
-  radiusTokenPrefix: "",
-  textTokenPrefix: "",
+  radiusTokenPrefix: "radius",
+  textTokenPrefix: "text",
 });
 
 Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
