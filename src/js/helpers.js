@@ -22,9 +22,11 @@ Pulsar.registerFunction(
     if (prefix && prefix.length > 0 && prefix === "measure") {
       segments.splice(1, 1);
     }
-
+    if (segments.length > 1) {
     segments[1] = segments[1].replace(/\s+/g, "");
     segments[2] = segments[2].replace(/\s+/g, "");
+    }
+
     
     // Create "sentence" separated by spaces so we can camelcase it all
     let sentence = segments.join(" ");
