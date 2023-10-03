@@ -73,14 +73,14 @@ Pulsar.registerFunction("gradientAngle", function (from, to) {
  * Prefixes: Add prefix for each category of the tokens. For example, all colors can start with "color, if needed"
  */
 Pulsar.registerPayload("behavior", {
-  colorTokenPrefix: "viu-color",
-  borderTokenPrefix: "viu-border",
-  gradientTokenPrefix: "viu-color",
-  measureTokenPrefix: "viu-measure",
-  shadowTokenPrefix: "viu-elevation",
-  typographyTokenPrefix: "viu-typography",
-  radiusTokenPrefix: "viu-radius",
-  textTokenPrefix: "viu-text",
+  colorTokenPrefix: "color",
+  borderTokenPrefix: "border",
+  gradientTokenPrefix: "color",
+  measureTokenPrefix: "measure",
+  shadowTokenPrefix: "elevation",
+  typographyTokenPrefix: "typography",
+  radiusTokenPrefix: "radius",
+  textTokenPrefix: "text",
 });
 
 Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
